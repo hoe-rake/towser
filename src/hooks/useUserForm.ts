@@ -1,8 +1,7 @@
 import { zodResolver } from '@hookform/resolvers/zod'
-import { useFieldArray,useForm } from 'react-hook-form'
-import { atom,useRecoilState } from 'recoil'
+import { useFieldArray, useForm } from 'react-hook-form'
+import { atom, useRecoilState } from 'recoil'
 import { z } from 'zod'
-
 
 const userSchema = z.object({
     team_dog: z.string().max(20),
@@ -79,6 +78,6 @@ export const useUserForm = () => {
         dogFields,
         dogAppend,
         catFields,
-        catAppend
+        catAppend,
     }
 }
